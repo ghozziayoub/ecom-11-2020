@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UsersListComponent } from './components/test/users-list/users-list.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -26,6 +27,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
 
+  {
+    path: 'test',
+    component: UsersListComponent
+  },
+
   //page 404
   {
     path: '**',
@@ -34,7 +40,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

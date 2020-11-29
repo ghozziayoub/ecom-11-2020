@@ -19,6 +19,8 @@ import { ChartsModule } from 'ng2-charts';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { CategoriesListComponent } from './components/categories-list/categories-list.component';
+import { UsersListComponent } from './components/test/users-list/users-list.component';
+import { UserDetailsComponent } from './components/test/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CategoriesListComponent } from './components/categories-list/categories
     DashboardComponent,
     SidebarComponent,
     TopbarComponent,
-    CategoriesListComponent
+    CategoriesListComponent,
+    UsersListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
